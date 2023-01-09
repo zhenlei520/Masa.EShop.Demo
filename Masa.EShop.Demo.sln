@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Masa.EShop.Service.Catalog", "src\Masa.EShop.Service.Catalog\Masa.EShop.Service.Catalog.csproj", "{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CD3CF467-3B2C-45F6-AC96-21BCA38AC1E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6} = {CD3CF467-3B2C-45F6-AC96-21BCA38AC1E3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B60F1444-102D-44FE-8BB8-B1A8C35E8DDB}
+	EndGlobalSection
+EndGlobal
