@@ -4,6 +4,7 @@ using Masa.BuildingBlocks.Ddd.Domain.Repositories;
 using Masa.BuildingBlocks.Dispatcher.Events;
 using Masa.BuildingBlocks.Dispatcher.IntegrationEvents;
 using Masa.EShop.Service.Catalog.Infrastructure;
+using Masa.EShop.Service.Catalog.Infrastructure.Middleware;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,14 +24,14 @@ builder.Services
     //     integrationEventBus
     //         .UseDapr()
     //         .UseEventLog<CatalogDbContext>()
-    //         .UseEventBus())
+    //         .UseEventBus(eventBusBuilder => eventBusBuilder.UseMiddleware(new[] { typeof(ValidatorMiddleware<>), typeof(LoggingMiddleware<>) })))
     .AddDomainEventBus(options =>
     {
         options.UseIntegrationEventBus(integrationEventBus =>
                 integrationEventBus
                     .UseDapr()
                     .UseEventLog<CatalogDbContext>())
-            .UseEventBus()
+            .UseEventBus(eventBusBuilder => eventBusBuilder.UseMiddleware(typeof(LoggingMiddleware<>)))
             .UseUoW<CatalogDbContext>()
             .UseRepository<CatalogDbContext>();
     });

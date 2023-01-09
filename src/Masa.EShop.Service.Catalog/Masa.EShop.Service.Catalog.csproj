@@ -15,6 +15,7 @@
     <PackageReference Include="Masa.Contrib.Ddd.Domain" Version="0.7.0-preview.17" />
     <PackageReference Include="Masa.Contrib.Ddd.Domain.Repository.EFCore" Version="0.7.0-preview.17" />
     <PackageReference Include="Masa.Contrib.Dispatcher.Events" Version="0.7.0-preview.17" />
+    <PackageReference Include="Masa.Contrib.Dispatcher.Events.FluentValidation" Version="0.7.0-preview.17" />
     <PackageReference Include="Masa.Contrib.Dispatcher.IntegrationEvents.Dapr" Version="0.7.0-preview.17" />
     <PackageReference Include="Masa.Contrib.Dispatcher.IntegrationEvents.EventLogs.EFCore" Version="0.7.0-preview.17" />
     <PackageReference Include="Masa.Contrib.Service.MinimalAPIs" Version="0.7.0-preview.17" />
