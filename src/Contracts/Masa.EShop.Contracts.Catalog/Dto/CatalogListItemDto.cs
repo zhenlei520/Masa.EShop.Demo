@@ -2,7 +2,7 @@
 
 public class CatalogListItemDto
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -14,7 +14,7 @@ public class CatalogListItemDto
     
     public string CatalogTypeName { get; set; }
 
-    public int CatalogBrandId { get; set; }
+    public Guid CatalogBrandId { get; set; }
     
     public string CatalogBrandName { get; set; }
 
