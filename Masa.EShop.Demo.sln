@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Masa.EShop.Service.Catalog", "src\Masa.EShop.Service.Catalog\Masa.EShop.Service.Catalog.csproj", "{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CD3CF467-3B2C-45F6-AC96-21BCA38AC1E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{875DA0C4-AC62-4925-95F5-F51EB75B02C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{49500CD1-C71A-4491-BC26-6BE8CEA8E63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masa.EShop.Service.Catalog", "src\Services\Masa.EShop.Service.Catalog\Masa.EShop.Service.Catalog.csproj", "{5C41F88A-173B-4DBE-85F6-DAE0613E3437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masa.EShop.Contracts.Catalog", "src\Contracts\Masa.EShop.Contracts.Catalog\Masa.EShop.Contracts.Catalog.csproj", "{8378AE42-D42B-4D53-800A-952FE00D0286}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +19,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C41F88A-173B-4DBE-85F6-DAE0613E3437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C41F88A-173B-4DBE-85F6-DAE0613E3437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C41F88A-173B-4DBE-85F6-DAE0613E3437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C41F88A-173B-4DBE-85F6-DAE0613E3437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8378AE42-D42B-4D53-800A-952FE00D0286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8378AE42-D42B-4D53-800A-952FE00D0286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8378AE42-D42B-4D53-800A-952FE00D0286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8378AE42-D42B-4D53-800A-952FE00D0286}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{29C53542-5A08-4865-9C6E-8B3BAC48A1F6} = {CD3CF467-3B2C-45F6-AC96-21BCA38AC1E3}
+		{875DA0C4-AC62-4925-95F5-F51EB75B02C8} = {CD3CF467-3B2C-45F6-AC96-21BCA38AC1E3}
+		{49500CD1-C71A-4491-BC26-6BE8CEA8E63D} = {CD3CF467-3B2C-45F6-AC96-21BCA38AC1E3}
+		{5C41F88A-173B-4DBE-85F6-DAE0613E3437} = {875DA0C4-AC62-4925-95F5-F51EB75B02C8}
+		{8378AE42-D42B-4D53-800A-952FE00D0286} = {49500CD1-C71A-4491-BC26-6BE8CEA8E63D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B60F1444-102D-44FE-8BB8-B1A8C35E8DDB}
