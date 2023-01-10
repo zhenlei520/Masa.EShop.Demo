@@ -221,3 +221,4 @@ Thunbs.db
 packages/
 .vscode/
 /.vs
+/src/Services/Masa.EShop.Service.Catalog/Data/*
