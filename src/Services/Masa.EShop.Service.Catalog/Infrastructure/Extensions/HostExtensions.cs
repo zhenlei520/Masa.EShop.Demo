@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace Masa.EShop.Service.Catalog.Infrastructure.Extensions;
+﻿namespace Masa.EShop.Service.Catalog.Infrastructure.Extensions;
 
 public static class HostExtensions
 {

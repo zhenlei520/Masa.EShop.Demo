@@ -1,13 +1,4 @@
-﻿using System.Linq.Expressions;
-using Masa.BuildingBlocks.Caching;
-using Masa.BuildingBlocks.Data.UoW;
-using Masa.BuildingBlocks.Ddd.Domain.Repositories;
-using Masa.Contrib.Ddd.Domain.Repository.EFCore;
-using Masa.EShop.Service.Catalog.Domain.Aggregates;
-using Masa.EShop.Service.Catalog.Domain.Repositories;
-using Microsoft.EntityFrameworkCore;
-
-namespace Masa.EShop.Service.Catalog.Infrastructure.Repositories;
+﻿namespace Masa.EShop.Service.Catalog.Infrastructure.Repositories;
 
 public class CatalogItemRepository : Repository<CatalogDbContext, CatalogItem, Guid>, ICatalogItemRepository
 {

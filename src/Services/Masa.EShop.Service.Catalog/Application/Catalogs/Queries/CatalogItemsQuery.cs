@@ -1,6 +1,4 @@
-﻿using Masa.EShop.Contracts.Catalog.Dto;
-using Masa.EShop.Contracts.Catalog.Request;
-using Masa.Utils.Models;
+﻿using Masa.EShop.Contracts.Catalog.Request;
 
 namespace Masa.EShop.Service.Catalog.Application.Catalogs.Queries;
 

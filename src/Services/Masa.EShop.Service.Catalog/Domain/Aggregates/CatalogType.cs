@@ -1,6 +1,4 @@
-﻿using Masa.BuildingBlocks.Ddd.Domain.SeedWork;
-
-namespace Masa.EShop.Service.Catalog.Domain.Aggregates;
+﻿namespace Masa.EShop.Service.Catalog.Domain.Aggregates;
 
 public class CatalogType : Enumeration
 {

@@ -1,8 +1,4 @@
-﻿using Masa.BuildingBlocks.Ddd.Domain.SeedWork;
-using Masa.EShop.Service.Catalog.Domain.Aggregates;
-using Microsoft.EntityFrameworkCore;
-
-namespace Masa.EShop.Service.Catalog.Infrastructure;
+﻿namespace Masa.EShop.Service.Catalog.Infrastructure;
 
 public static class CatalogDbContextSeed
 {

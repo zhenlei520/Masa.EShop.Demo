@@ -1,6 +1,4 @@
 ﻿using FluentValidation;
-using Masa.BuildingBlocks.Ddd.Domain.SeedWork;
-using Masa.EShop.Service.Catalog.Domain.Aggregates;
 
 namespace Masa.EShop.Service.Catalog.Application.Catalogs.Commands;
 
