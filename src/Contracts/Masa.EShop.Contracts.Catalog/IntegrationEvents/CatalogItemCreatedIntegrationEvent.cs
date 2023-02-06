@@ -1,6 +1,4 @@
-﻿using Masa.BuildingBlocks.Dispatcher.IntegrationEvents;
-
-namespace Masa.EShop.Contracts.Catalog.IntegrationEvents;
+﻿namespace Masa.EShop.Contracts.Catalog.IntegrationEvents;
 
 public record CatalogItemCreatedIntegrationEvent : IntegrationEvent
 {

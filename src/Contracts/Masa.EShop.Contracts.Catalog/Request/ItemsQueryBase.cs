@@ -1,6 +1,4 @@
-﻿using Masa.BuildingBlocks.ReadWriteSplitting.Cqrs.Queries;
-
-namespace Masa.EShop.Contracts.Catalog.Request;
+﻿namespace Masa.EShop.Contracts.Catalog.Request;
 
 public abstract record ItemsQueryBase<TResult> : Query<TResult>
 {

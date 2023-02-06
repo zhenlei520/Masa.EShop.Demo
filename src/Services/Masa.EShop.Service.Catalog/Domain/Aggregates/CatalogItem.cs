@@ -1,7 +1,4 @@
-﻿using Masa.BuildingBlocks.Ddd.Domain.Entities.Full;
-using Masa.EShop.Service.Catalog.Domain.Events;
-
-namespace Masa.EShop.Service.Catalog.Domain.Aggregates;
+﻿namespace Masa.EShop.Service.Catalog.Domain.Aggregates;
 
 public class CatalogItem : FullAggregateRoot<Guid, int>
 {
@@ -42,7 +39,7 @@ public class CatalogItem : FullAggregateRoot<Guid, int>
 
     private void AddCatalogItemDomainEvent()
     {
-        var domainEvent = this.Map<CatalogItemCreatedDomainEvent>();
+        var domainEvent = this.Map<CatalogItemCreatedIntegrationDomainEvent>();
         domainEvent.CatalogBrandId = _catalogBrandId;
         domainEvent.CatalogTypeId = _catalogTypeId;
         AddDomainEvent(domainEvent);

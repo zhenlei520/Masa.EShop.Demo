@@ -1,15 +1,4 @@
-﻿using System.Linq.Expressions;
-using Masa.BuildingBlocks.Data;
-using Masa.BuildingBlocks.Ddd.Domain.Repositories;
-using Masa.Contrib.Dispatcher.Events;
-using Masa.EShop.Contracts.Catalog.Dto;
-using Masa.EShop.Service.Catalog.Application.Catalogs.Commands;
-using Masa.EShop.Service.Catalog.Application.Catalogs.Queries;
-using Masa.EShop.Service.Catalog.Domain.Aggregates;
-using Masa.EShop.Service.Catalog.Domain.Repositories;
-using Masa.Utils.Models;
-
-namespace Masa.EShop.Service.Catalog.Application.Catalogs;
+﻿namespace Masa.EShop.Service.Catalog.Application.Catalogs;
 
 public class CatalogItemHandler
 {
@@ -28,7 +17,6 @@ public class CatalogItemHandler
     {
         var catalogItem = new CatalogItem(guidGenerator.NewId(), command.CatalogBrandId, command.CatalogTypeId, command.Name, command.Description, command.Price, command.PictureFileName);
         await _catalogItemRepository.AddAsync(catalogItem, cancellationToken);
-        await _catalogItemRepository.UnitOfWork.SaveChangesAsync(cancellationToken);
     }
 
     /// <summary>

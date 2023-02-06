@@ -1,8 +1,4 @@
-﻿using Masa.EShop.Service.Catalog.Domain.Aggregates;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Masa.EShop.Service.Catalog.Infrastructure.EntityConfigurations;
+﻿namespace Masa.EShop.Service.Catalog.Infrastructure.EntityConfigurations;
 
 public class CatalogBrandEntityTypeConfiguration
     : IEntityTypeConfiguration<CatalogBrand>

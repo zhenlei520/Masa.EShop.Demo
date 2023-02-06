@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masa.EShop.Service.Catalog"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masa.EShop.Contracts.Catalog", "src\Contracts\Masa.EShop.Contracts.Catalog\Masa.EShop.Contracts.Catalog.csproj", "{8378AE42-D42B-4D53-800A-952FE00D0286}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{21D399FA-DC7B-4171-B956-AE148B8377F3}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

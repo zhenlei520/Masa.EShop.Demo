@@ -1,6 +1,4 @@
 ﻿using Mapster;
-using Masa.EShop.Contracts.Catalog.Dto;
-using Masa.EShop.Service.Catalog.Domain.Aggregates;
 
 namespace Masa.EShop.Service.Catalog.Infrastructure;
 

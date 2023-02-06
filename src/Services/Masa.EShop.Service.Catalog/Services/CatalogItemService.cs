@@ -1,10 +1,4 @@
-﻿using Masa.BuildingBlocks.Dispatcher.Events;
-using Masa.EShop.Contracts.Catalog.Dto;
-using Masa.EShop.Service.Catalog.Application.Catalogs.Commands;
-using Masa.EShop.Service.Catalog.Application.Catalogs.Queries;
-using Masa.Utils.Models;
-
-namespace Masa.EShop.Service.Catalog.Services;
+﻿namespace Masa.EShop.Service.Catalog.Services;
 
 public class CatalogItemService : ServiceBase
 {

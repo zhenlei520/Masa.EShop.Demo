@@ -1,8 +1,4 @@
-﻿using Masa.EShop.Service.Catalog.Domain.Aggregates;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Masa.EShop.Service.Catalog.Infrastructure.EntityConfigurations;
+﻿namespace Masa.EShop.Service.Catalog.Infrastructure.EntityConfigurations;
 
 public class CatalogItemEntityTypeConfiguration
     : IEntityTypeConfiguration<CatalogItem>
@@ -15,11 +11,11 @@ public class CatalogItemEntityTypeConfiguration
             .IsRequired();
 
         builder.Property(ci => ci.Name)
-            .IsRequired(true)
+            .IsRequired()
             .HasMaxLength(50);
 
         builder.Property(ci => ci.Price)
-            .IsRequired(true);
+            .IsRequired();
 
         builder.Property(ci => ci.PictureFileName)
             .IsRequired(false);
