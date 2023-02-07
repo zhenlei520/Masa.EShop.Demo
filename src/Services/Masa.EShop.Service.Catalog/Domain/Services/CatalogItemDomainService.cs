@@ -2,7 +2,4 @@
 
 public class CatalogItemDomainService : DomainService
 {
-    public CatalogItemDomainService(IDomainEventBus eventBus) : base(eventBus)
-    {
-    }
 }

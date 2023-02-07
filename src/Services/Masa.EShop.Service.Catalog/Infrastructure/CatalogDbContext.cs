@@ -7,9 +7,9 @@ public class CatalogDbContext : MasaDbContext<CatalogDbContext>
 
     }
     
-    protected override void OnModelCreatingExecuting(ModelBuilder builder)
+    protected override void OnModelCreatingExecuting(ModelBuilder modelBuilder)
     {
-        builder.ApplyConfigurationsFromAssembly(typeof(CatalogDbContext).Assembly);
-        base.OnModelCreatingExecuting(builder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogDbContext).Assembly);
+        base.OnModelCreatingExecuting(modelBuilder);
     }
 }

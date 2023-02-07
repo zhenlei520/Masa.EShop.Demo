@@ -134,9 +134,6 @@ namespace Masa.EShop.Service.Catalog.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("OnReorder")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("PictureFileName")
                         .HasColumnType("TEXT");
 

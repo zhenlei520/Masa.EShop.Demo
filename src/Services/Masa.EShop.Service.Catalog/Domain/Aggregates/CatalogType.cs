@@ -2,7 +2,7 @@
 
 public class CatalogType : Enumeration
 {
-    public static CatalogType Cap = new Cap(1, "Cap");
+    public static CatalogType Cap = new Cap();
     public static CatalogType Mug = new(2, "Mug");
     public static CatalogType Pin = new(3, "Pin");
     public static CatalogType Sticker = new(4, "Sticker");
@@ -20,7 +20,7 @@ public class CatalogType : Enumeration
 
 public class Cap : CatalogType
 {
-    public Cap(int id, string name) : base(id, name)
+    public Cap() : base(1, "Cap")
     {
     }
 

@@ -73,7 +73,6 @@ namespace Masa.EShop.Service.Catalog.Migrations
                     AvailableStock = table.Column<int>(type: "INTEGER", nullable: false),
                     RestockThreshold = table.Column<int>(type: "INTEGER", nullable: false),
                     MaxStockThreshold = table.Column<int>(type: "INTEGER", nullable: false),
-                    OnReorder = table.Column<bool>(type: "INTEGER", nullable: false),
                     Creator = table.Column<int>(type: "INTEGER", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Modifier = table.Column<int>(type: "INTEGER", nullable: false),

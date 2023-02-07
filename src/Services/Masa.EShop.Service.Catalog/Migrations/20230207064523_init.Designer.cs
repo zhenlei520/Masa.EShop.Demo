@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Masa.EShop.Service.Catalog.Migrations
 {
     [DbContext(typeof(CatalogDbContext))]
-    [Migration("20230110142942_init")]
+    [Migration("20230207064523_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -135,9 +135,6 @@ namespace Masa.EShop.Service.Catalog.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("OnReorder")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PictureFileName")
                         .HasColumnType("TEXT");
