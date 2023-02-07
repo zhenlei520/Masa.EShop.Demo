@@ -39,7 +39,7 @@ public class CatalogItem : FullAggregateRoot<Guid, int>
 
     private void AddCatalogItemDomainEvent()
     {
-        var domainEvent = this.Map<CatalogItemCreatedDomainEvent>();
+        var domainEvent = this.Map<CatalogItemCreatedIntegrationDomainEvent>();
         domainEvent.CatalogBrandId = _catalogBrandId;
         domainEvent.CatalogTypeId = _catalogTypeId;
         AddDomainEvent(domainEvent);
