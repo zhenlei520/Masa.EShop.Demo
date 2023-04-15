@@ -10,7 +10,7 @@ public class CatalogBrandEntityTypeConfiguration
         builder.HasKey(cb => cb.Id);
 
         builder.Property(cb => cb.Id)
-           .IsRequired();
+            .IsRequired();
 
         builder.Property(cb => cb.Brand)
             .IsRequired()

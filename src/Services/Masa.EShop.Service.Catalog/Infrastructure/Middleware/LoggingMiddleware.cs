@@ -1,6 +1,6 @@
 ﻿namespace Masa.EShop.Service.Catalog.Infrastructure.Middleware;
 
-public class LoggingMiddleware<TEvent> : Middleware<TEvent>
+public class LoggingMiddleware<TEvent> : EventMiddleware<TEvent>
     where TEvent : IEvent
 {
     private readonly ILogger<LoggingMiddleware<TEvent>> _logger;

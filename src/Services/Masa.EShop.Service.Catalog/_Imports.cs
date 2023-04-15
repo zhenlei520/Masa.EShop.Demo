@@ -2,6 +2,7 @@
 global using Masa.BuildingBlocks.Caching;
 global using Masa.BuildingBlocks.Data;
 global using Masa.BuildingBlocks.Data.UoW;
+global using Masa.BuildingBlocks.Ddd.Domain;
 global using Masa.BuildingBlocks.Ddd.Domain.Entities.Full;
 global using Masa.BuildingBlocks.Ddd.Domain.Events;
 global using Masa.BuildingBlocks.Ddd.Domain.Repositories;

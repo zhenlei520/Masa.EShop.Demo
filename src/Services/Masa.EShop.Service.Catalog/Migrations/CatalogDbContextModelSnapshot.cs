@@ -107,6 +107,12 @@ namespace Masa.EShop.Service.Catalog.Migrations
                     b.Property<int>("AvailableStock")
                         .HasColumnType("INTEGER");
 
+                    b.Property<Guid>("CatalogBrandId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CatalogTypeId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("TEXT");
 
@@ -143,19 +149,11 @@ namespace Masa.EShop.Service.Catalog.Migrations
                     b.Property<int>("RestockThreshold")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid>("_catalogBrandId")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("CatalogBrandId");
-
-                    b.Property<int>("_catalogTypeId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("CatalogTypeId");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("_catalogBrandId");
+                    b.HasIndex("CatalogBrandId");
 
-                    b.HasIndex("_catalogTypeId");
+                    b.HasIndex("CatalogTypeId");
 
                     b.ToTable("Catalog", (string)null);
                 });
@@ -180,13 +178,13 @@ namespace Masa.EShop.Service.Catalog.Migrations
                 {
                     b.HasOne("Masa.EShop.Service.Catalog.Domain.Aggregates.CatalogBrand", "CatalogBrand")
                         .WithMany()
-                        .HasForeignKey("_catalogBrandId")
+                        .HasForeignKey("CatalogBrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Masa.EShop.Service.Catalog.Domain.Aggregates.CatalogType", "CatalogType")
                         .WithMany()
-                        .HasForeignKey("_catalogTypeId")
+                        .HasForeignKey("CatalogTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -15,23 +15,26 @@ public class CatalogItemRepository : Repository<CatalogDbContext, CatalogItem, G
     public override async Task<CatalogItem?> FindAsync(Guid id, CancellationToken cancellationToken = default)
     {
         TimeSpan? timeSpan = null;
-        var catalogInfo = await _multilevelCacheClient.GetOrSetAsync(id.ToString(), () =>
+        var catalogInfo = await _multilevelCacheClient.GetOrSetAsync(id.ToString(), async () =>
         {
-            var info = Context.Set<CatalogItem>()
+            var info = await Context.Set<CatalogItem>()
                 .Include(catalogItem => catalogItem.CatalogType)
                 .Include(catalogItem => catalogItem.CatalogBrand)
                 .AsSplitQuery()
-                .FirstOrDefaultAsync(catalogItem => catalogItem.Id == id, cancellationToken).ConfigureAwait(false).GetAwaiter().GetResult();
+                .FirstOrDefaultAsync(catalogItem => catalogItem.Id == id, cancellationToken);
 
             if (info != null)
+            {
+                timeSpan = TimeSpan.FromSeconds(30);
                 return new CacheEntry<CatalogItem>(info, TimeSpan.FromDays(3))
                 {
                     SlidingExpiration = TimeSpan.FromMinutes(5)
                 };
+            }
 
             timeSpan = TimeSpan.FromSeconds(5);
             return new CacheEntry<CatalogItem>(info);
-        }, timeSpan == null ? null : new CacheEntryOptions(timeSpan));
+        }, options => options.AbsoluteExpirationRelativeToNow = timeSpan);
         return catalogInfo;
     }
 

@@ -1,6 +1,4 @@
-﻿using FluentValidation;
-
-namespace Masa.EShop.Service.Catalog.Application.Catalogs.Queries;
+﻿namespace Masa.EShop.Service.Catalog.Application.Catalogs.Queries;
 
 public class CatalogItemsQueryValidator : AbstractValidator<CatalogItemsQuery>
 {

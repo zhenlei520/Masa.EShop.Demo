@@ -1,6 +1,4 @@
-﻿using Masa.EShop.Service.Catalog.Domain.Services;
-
-namespace Masa.EShop.Service.Catalog.Application.Catalogs;
+﻿namespace Masa.EShop.Service.Catalog.Application.Catalogs;
 
 public class CatalogItemHandler
 {
@@ -16,11 +14,12 @@ public class CatalogItemHandler
     /// </summary>
     [EventHandler]
     public async Task AddAsync(
-        CatalogItemCommand command, 
-        ISequentialGuidGenerator guidGenerator, 
+        CatalogItemCommand command,
         CancellationToken cancellationToken)
     {
-        var catalogItem = new CatalogItem(guidGenerator.NewId(), command.CatalogBrandId, command.CatalogTypeId, command.Name, command.Description, command.Price, command.PictureFileName);
+        var catalogItem = new CatalogItem(command.Name, command.Description, command.Price, command.PictureFileName);
+        catalogItem.SetCatalogBrand(command.CatalogBrandId);
+        catalogItem.SetCatalogType(command.CatalogTypeId);
         await _catalogItemRepository.AddAsync(catalogItem, cancellationToken);
     }
 

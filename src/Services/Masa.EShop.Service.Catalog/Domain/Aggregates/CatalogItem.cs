@@ -10,11 +10,11 @@ public class CatalogItem : FullAggregateRoot<Guid, int>
 
     public string PictureFileName { get; private set; } = default!;
 
-    private int _catalogTypeId;
+    public int CatalogTypeId { get; private set; }
 
     public CatalogType CatalogType { get; private set; } = default!;
 
-    private Guid _catalogBrandId;
+    public Guid CatalogBrandId { get; private set; }
 
     public CatalogBrand CatalogBrand { get; private set; } = default!;
 
@@ -24,10 +24,13 @@ public class CatalogItem : FullAggregateRoot<Guid, int>
 
     public int MaxStockThreshold { get; private set; }
 
-    public CatalogItem(Guid id, Guid catalogBrandId, int catalogTypeId, string name, string description, decimal price, string pictureFileName) : base(id)
+    private CatalogItem(Guid? id = null)
     {
-        _catalogBrandId = catalogBrandId;
-        _catalogTypeId = catalogTypeId;
+        Id = id ?? IdGeneratorFactory.SequentialGuidGenerator.NewId();
+    }
+
+    public CatalogItem(string name, string description, decimal price, string pictureFileName) : this()
+    {
         Name = name;
         Description = description;
         Price = price;
@@ -35,11 +38,21 @@ public class CatalogItem : FullAggregateRoot<Guid, int>
         AddCatalogItemDomainEvent();
     }
 
+    public void SetCatalogType(int catalogTypeId)
+    {
+        CatalogTypeId = catalogTypeId;
+    }
+
+    public void SetCatalogBrand(Guid catalogBrand)
+    {
+        CatalogBrandId = catalogBrand;
+    }
+
     private void AddCatalogItemDomainEvent()
     {
         var domainEvent = this.Map<CatalogItemCreatedIntegrationDomainEvent>();
-        domainEvent.CatalogBrandId = _catalogBrandId;
-        domainEvent.CatalogTypeId = _catalogTypeId;
+        domainEvent.CatalogBrandId = CatalogBrandId;
+        domainEvent.CatalogTypeId = CatalogTypeId;
         AddDomainEvent(domainEvent);
     }
 }

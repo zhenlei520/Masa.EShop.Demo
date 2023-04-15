@@ -11,33 +11,21 @@ public class CatalogItemEntityTypeConfiguration
             .IsRequired();
 
         builder.Property(ci => ci.Name)
-            .IsRequired()
+            .IsRequired(true)
             .HasMaxLength(50);
 
         builder.Property(ci => ci.Price)
-            .IsRequired();
+            .IsRequired(true);
 
         builder.Property(ci => ci.PictureFileName)
             .IsRequired(false);
 
-        builder
-            .Property<Guid>("_catalogBrandId")
-            .UsePropertyAccessMode(PropertyAccessMode.Field)
-            .HasColumnName("CatalogBrandId")
-            .IsRequired();
-        
-        builder
-            .Property<int>("_catalogTypeId")
-            .UsePropertyAccessMode(PropertyAccessMode.Field)
-            .HasColumnName("CatalogTypeId")
-            .IsRequired();
-        
         builder.HasOne(ci => ci.CatalogBrand)
             .WithMany()
-            .HasForeignKey("_catalogBrandId");
-        
+            .HasForeignKey(ci => ci.CatalogBrandId);
+
         builder.HasOne(ci => ci.CatalogType)
             .WithMany()
-            .HasForeignKey("_catalogTypeId");
+            .HasForeignKey(ci => ci.CatalogTypeId);
     }
 }

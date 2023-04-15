@@ -3,9 +3,9 @@
 public static class CatalogDbContextSeed
 {
 #pragma warning disable S2178
-    
+
     /// <summary>
-    /// 迁移种子数据
+    /// Migrate seed data
     /// </summary>
     /// <param name="catalogDbContext"></param>
     /// <param name="serviceProvider"></param>
@@ -14,8 +14,8 @@ public static class CatalogDbContextSeed
         var dataUpdate =
             await catalogDbContext.EnumerationSeed() |
             await catalogDbContext.CatalogBrandSeedAsync();
-        
-        if (dataUpdate) 
+
+        if (dataUpdate)
             await catalogDbContext.SaveChangesAsync();
     }
 #pragma warning disable S2178
@@ -27,7 +27,7 @@ public static class CatalogDbContextSeed
 
         var catalogBrands = new List<CatalogBrand>()
         {
-            new("Lonsid")
+            new(Guid.Parse("6d99e4d5-dc38-42e2-9a7d-4da6e9008031"), "Lonsid")
         };
         await dbContext.Set<CatalogBrand>().AddRangeAsync(catalogBrands);
         return true;
