@@ -15,4 +15,6 @@ public record CatalogItemCreatedIntegrationEvent : IntegrationEvent
     public int CatalogTypeId { get; set; }
 
     public Guid CatalogBrandId { get; set; }
+
+    public override string Topic { get; set; } = nameof(CatalogItemCreatedIntegrationEvent);
 }

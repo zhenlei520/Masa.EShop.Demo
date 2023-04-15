@@ -47,6 +47,7 @@ public class CatalogItemRepository : Repository<CatalogDbContext, CatalogItem, G
     {
         sorting ??= new Dictionary<string, bool>();
         return Context.Set<CatalogItem>()
+            .Where(predicate)
             .Include(catalogItem => catalogItem.CatalogType)
             .Include(catalogItem => catalogItem.CatalogBrand)
             .OrderBy(sorting).Skip(skip).Take(take).ToListAsync(cancellationToken);
